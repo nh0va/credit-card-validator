@@ -14,10 +14,11 @@ function isValid() {
 ########## START SCRIPT ##########
 declare cardArray[15]
 sum=0
+cardnum=$1
 
 ## Assign every number of the credit card into an array
 for (( i=0; i<16; ++i)); do
-	cardArray+=(${1:$i:1})
+	cardArray+=(${cardnum:$i:1})
 done
 
 lastNumber=${cardArray[15]} # Variable with the last element of the array
